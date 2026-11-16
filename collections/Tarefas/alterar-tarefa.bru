@@ -1,0 +1,23 @@
+meta {
+  name: alterar-tarefa
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://127.0.0.1:5000/tarefas/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "titulo": "Estudar Flask e JWT - Atualizado",
+    "descricao": "Já estou a rever JWT Extended",
+    "estado": "Em curso"
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: listar-tarefas
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://127.0.0.1:5000/tarefas
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
